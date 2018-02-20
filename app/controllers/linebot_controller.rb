@@ -27,8 +27,8 @@ class LinebotController < ApplicationController
         case event.type
           when Line::Bot::Event::MessageType::Location
             location = Location.new(
-              post_code: event.message['address'].match(/\d\d\d-\d\d\d\d/).to_s,
-              address: event.message['address'].gsub(/〒\d\d\d-\d\d\d\d /, "")
+              address: set_address(event.message),
+              post_code: set_post_code(event.message)
             )
             location.save!
           else
@@ -42,5 +42,13 @@ class LinebotController < ApplicationController
     end
     }
     head :ok
+  end
+
+  def set_post_code(message)
+    message['address'].match(/\d\d\d-\d\d\d\d/).to_s
+  end
+
+  def set_address(message)
+    message['address'].gsub(/〒\d\d\d-\d\d\d\d /, "")
   end
 end
