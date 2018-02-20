@@ -6,6 +6,6 @@ class CreateLocations < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :locations, [:address, :post_code], unique: true
+    add_index :locations, :address, unique: true
   end
 end

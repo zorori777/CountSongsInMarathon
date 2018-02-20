@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20180220024857) do
     t.string "post_code", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["address", "post_code"], name: "index_locations_on_address_and_post_code", unique: true
+    t.index ["address"], name: "index_locations_on_address", unique: true
   end
 
   create_table "songs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
