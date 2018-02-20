@@ -25,29 +25,22 @@ class LinebotController < ApplicationController
       case event
       when Line::Bot::Event::Message
         case event.type
-          when Line::Bot::Event::MessageType::Text
-            message = {
-              type: 'text',
-              text: event.message['text']
-            }
           when Line::Bot::Event::MessageType::Location
             location = Location.new(
               post_code: event.message['address'].match(/\d\d\d-\d\d\d\d/).to_s,
               address: event.message['address'].gsub(/〒\d\d\d-\d\d\d\d /, "")
             )
             location.save!
+          else
+            # deployなどが安定したら画像を使えるようにしたい
             message = {
               type: 'text',
-              text: return_location(event.message)
+              text: "反応いたしません。"
             }
         end
         client.reply_message(event['replyToken'], message)
     end
     }
     head :ok
-  end
-
-  def return_location(message)
-    "あなたの現在地は#{message['address']}です！"
   end
 end
