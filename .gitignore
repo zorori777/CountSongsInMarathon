@@ -20,7 +20,6 @@
 
 bin/
 vendor/
-lib/
 public/
 tmp/
 vendor/
