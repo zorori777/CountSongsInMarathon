@@ -18,7 +18,6 @@
 
 .byebug_history
 
-bin/
 vendor/
 public/
 tmp/
