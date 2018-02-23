@@ -1,3 +1,3 @@
 class Song < ApplicationRecord
-  belogs_to :song
+  belongs_to :song
 end
