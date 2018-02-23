@@ -8,7 +8,8 @@ class CountSongsController < ApplicationController
       title: play.name,
       image: play.album.images.second["url"],
       artist_name: play.artists.first.name,
-      external_url: play.artists.first.external_urls["spotify"]
+      external_url: play.artists.first.external_urls["spotify"],
+      location_id: Location.last
     )
     song.save!
     end
