@@ -4,12 +4,13 @@ class CountSongsController < ApplicationController
     recently_played = spotify_user.recently_played(limit: 10)
 
     recently_played.each do |play|
-    song = Song.new(
+      location_id = Location.last.id
+      song = Song.new(
       title: play.name,
       image: play.album.images.second["url"],
       artist_name: play.artists.first.name,
       external_url: play.artists.first.external_urls["spotify"],
-      location_id: Location.last
+      location_id: location_id
     )
     song.save!
     end
