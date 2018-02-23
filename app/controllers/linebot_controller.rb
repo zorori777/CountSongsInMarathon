@@ -26,6 +26,24 @@ class LinebotController < ApplicationController
               post_code: set_post_code(event.message)
             )
             location.save!
+
+            message = {
+              "type": "template",
+              "altText": "ただいま神曲集計中でございます",
+              "template": {
+                "type": "image_carousel",
+                "columns": [
+                  {
+                    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt6n8b2k_z1AeP-wfT-lM8AmKbVhtlQpxcoVo-IbQOSPtFjb7sMg",
+                    "action": {
+                      "type": "uri",
+                      "label": "神曲！！",
+                      "uri": "https://countsongs.herokuapp.com/auth/spotify"
+                    }
+                  }
+                ]
+              }
+            }
           else
             # deployなどが安定したら画像を使えるようにしたい
             message = {
