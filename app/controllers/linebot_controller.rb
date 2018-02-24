@@ -29,16 +29,16 @@ class LinebotController < ApplicationController
 
             message = {
               "type": "template",
-              "altText": "ただいま神曲集計中でございます",
+              "altText": "わたさん頑張ってるらしいよww",
               "template": {
                 "type": "image_carousel",
                 "columns": [
                   {
-                    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt6n8b2k_z1AeP-wfT-lM8AmKbVhtlQpxcoVo-IbQOSPtFjb7sMg",
+                    "imageUrl": "https://c1.staticflickr.com/9/8132/29971985550_e666791121_b.jpg",
                     "action": {
                       "type": "uri",
-                      "label": "神曲！！",
-                      "uri": "https://countsongs.herokuapp.com/auth/spotify"
+                      "label": "神曲!!",
+                      "uri": "https://countsongs.herokuapp.com/auty"
                     }
                   }
                 ]

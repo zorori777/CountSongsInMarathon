@@ -1,0 +1,13 @@
+html, body, main {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  font-size: 100px;
+}
