@@ -38,7 +38,7 @@ class LinebotController < ApplicationController
                     "action": {
                       "type": "uri",
                       "label": "神曲!!",
-                      "uri": "https://countsongs.herokuapp.com/auty"
+                      "uri": "https://countsongs.herokuapp.com/auth/spotify/callback"
                     }
                   }
                 ]
