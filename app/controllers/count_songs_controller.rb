@@ -5,7 +5,6 @@ class CountSongsController < ApplicationController
 
     recently_played.each do |play|
       location_id = Location.last.id
-      binding.pry
       song = Song.new(
       title: play.name,
       image: play.album.images.second["url"],
