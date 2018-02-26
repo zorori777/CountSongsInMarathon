@@ -12,7 +12,7 @@
 
 - 認証後,[spotifyのapi](https://developer.spotify.com/web-api/web-api-personalization-endpoints/get-recently-played/)を使って、直近聞いた曲をLocationと紐付いて、Songs　テーブルに保存される
 
-# image
+# Image
 
 ![lineBot1](ImagesForReadMe/ReplayFromLineBot.png)
 
