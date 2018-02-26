@@ -1,24 +1,31 @@
-# README
+# 概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+東京マラソンでランニング中に聞いた曲を記録する
 
-Things you may want to cover:
+# 挙動
 
-* Ruby version
+- LINEBOTにLINEから直接位置情報を送信する
 
-* System dependencies
+- 送信された郵便番号と住所がLocationｓテーブルに保存される
 
-* Configuration
+- その後BOTからspotify　apiを実装したサイトのリンクが返ってくる
 
-* Database creation
+- 認証後,[spotifyのapi](https://developer.spotify.com/web-api/web-api-personalization-endpoints/get-recently-played/)を使って、直近聞いた曲をLocationと紐付いて、Songs　テーブルに保存される
 
-* Database initialization
+# image
 
-* How to run the test suite
+![lineBot1](ImagesForReadMe/Image uploaded from iOS.png)
 
-* Services (job queues, cache servers, search engines, etc.)
+![LineBot2](ImagesForReadMe/Image uploaded from iOS (2).png)
 
-* Deployment instructions
+# 使用技術
 
-* ...
+- Ruby Version 2.3.1
+
+- Rails Version 5.4.1
+
+- [Line Bot](https://github.com/line/line-bot-sdk-ruby)
+
+- [Spotify Api](https://github.com/guilhermesad/rspotify)
+
+- heroku
