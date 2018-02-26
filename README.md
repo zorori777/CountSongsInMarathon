@@ -14,9 +14,9 @@
 
 # image
 
-![lineBot1](ImagesForReadMe/Image uploaded from iOS.png)
+![lineBot1](ImagesForReadMe/ReplayFromLineBot.png)
 
-![LineBot2](ImagesForReadMe/Image uploaded from iOS (2).png)
+![LineBot2](ImagesForReadMe/AfterAuth.png)
 
 # 使用技術
 
